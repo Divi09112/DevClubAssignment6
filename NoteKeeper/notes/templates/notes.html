@@ -3,6 +3,8 @@
 <html>
   <head>
     <title>ToDo</title>
+{% load static %}
+<link type="text/css" rel="stylesheet" href="{% static "notes/notes.css"%}"
   </head>
 
   <body>
@@ -14,5 +16,6 @@
       <ul id="list">
       </ul>
     </div>
+    <script src="{% static "/notes/notes.js" %}"></script>
   </body>
 </html>

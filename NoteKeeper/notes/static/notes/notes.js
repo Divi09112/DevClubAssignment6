@@ -2,7 +2,7 @@ var k = 0;
 
 var dark = true;
 
-function enter(e){
+function enter(elem,e){
   if (e.keyCode==13){
     var li = document.createElement("li");
     li.innerHTML=document.getElementById("entry").value;
@@ -41,3 +41,5 @@ function strike(n){
     };
   };
 }
+
+console.log(document.getElementById('entry').value)

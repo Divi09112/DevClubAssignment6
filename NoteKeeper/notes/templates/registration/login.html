@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NoteKeeper-Login</title>
+</head>
+<body>
+{{state}}
+{% if next %}
+  {% if user.is_authenticated %}
+  <p>You do not have permission to see this page.</p>
+  {% else %}
+  <p>Please login to see this page</p>
+  {% endif %}
+{% endif %}
+  
+<form method='POST' action="{% url 'login' %}">
+<table>
+{% csrf_token %}
+
+{{ form }}
+</table>
+
+<input type ="submit" value="login">
+<input type="hidden" name ="next" value="{{ next }}">
+</form>
+</body>
+</html>

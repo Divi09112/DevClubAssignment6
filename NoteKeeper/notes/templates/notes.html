@@ -1,21 +1,8 @@
-<!DOCTYPE html>
+{% extends "base_generic.html" %}
 
-<html>
-  <head>
-    <title>ToDo</title>
-{% load static %}
-<link type="text/css" rel="stylesheet" href="{% static "notes/notes.css"%}"
-  </head>
-
-  <body>
-    <div class="heading">
-      <span>Your ToDos</span><br /><br />
-      <input type="text" id="entry" onkeypress="enter(event)" placeholder = "Add a new todo and hit Enter">
-    </div>
-    <div class="list">
-      <ul id="list">
-      </ul>
-    </div>
-    <script src="{% static "/notes/notes.js" %}"></script>
-  </body>
-</html>
+{% block content %}
+<div class = "main">
+<h1>Welcome {{ user }}</h1>
+<h3><a href='create'>Create a new todo</a></h3>
+</div>
+{%endblock%}

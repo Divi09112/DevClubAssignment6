@@ -1,6 +1,18 @@
+.sidebar{
+  width: 200px;
+  height: 100%;
+  background-color:#ffc100;
+  position: fixed;
+  height:100%;
+  z-index:1;
+  top:0;
+  left:0;
+}
+
 .heading{
   width: 500px;
   margin: auto;
+  margin-top: 100px;
   padding:10px;
   background-color:#ffca1e;
   text-align: center;
@@ -54,3 +66,10 @@ li.clicked{
   transition: 0.3s;
 }
 
+.main{
+  margin-left:200px;
+}
+
+body{
+margin:0px;
+}

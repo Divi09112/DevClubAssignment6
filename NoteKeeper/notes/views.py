@@ -5,9 +5,9 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth.models import User,Group
 from django.contrib.auth import authenticate, login
-
+from django.contrib.auth.decorators import login_required
 # Create your views here.
-
+@login_required(login_url='/notes/login/')
 def notes(request):
     tasks =todo.objects.filter(user=request.user)
     return render(
@@ -52,6 +52,7 @@ def create_user(request):
         request,'notes/signup.html',{ 'form':form }
 )
 
+@login_required(login_url='/notes/login/')
 def show(request,pk):
     tasks = todo.objects.filter(user=request.user)
     try:

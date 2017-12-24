@@ -9,11 +9,11 @@
     {% block sidebar %}
     <div class="sidebar">
       <span>All Todos</span>
-      <ul>
         {% for task in tasks %}
-        <li><a href="{{ task.get_absolut_url }}">{{ task.title }}</a></li>
+        <hr><div class="list" ><a class='show' href="{{ task.get_absolute_url }}">{{ task.title }}</a></div>
         {% endfor %}
-      </ul>
+      
+      <hr>
       <a href ="{% url 'logout' %}">Logout</a>
     </div>
     {% endblock %}

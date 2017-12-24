@@ -2,9 +2,11 @@
 <html>
 <head>
 <title>NoteKeeper-LoggedOut</title>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'notes/logout.css' %}">
 </head>
-<body>
+<body><div>
 <p>Succesfully logged out!</p>
-<a href="{% url 'login' %}">Click here to login again.</a>
-</body>
+Click here to <a href="{% url 'login' %}">login</a> again.
+</div></body>
 </html>
